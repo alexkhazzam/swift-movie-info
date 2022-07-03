@@ -19,8 +19,9 @@ extension ViewController: MovieManagerDelegate {
         }
     }
     
-    func movieNotFound() {
+    func movieNotFound(_ movieManagerDelegate: MovieManager, _ error: Error) {
         DispatchQueue.main.async {
+            print(error)
             self.movieNotFoundLabel.text = "Movie/Show Not Found!"
             self.loadingIndicator.stopAnimating()
         }
@@ -28,6 +29,7 @@ extension ViewController: MovieManagerDelegate {
     
     func didFailWithError(_ error: Error) {
         DispatchQueue.main.async {
+            print(error)
             self.logoImageView.image = UIImage(systemName: "xmark.icloud")
             self.movieNotFoundLabel.text = ""
             self.loadingIndicator.stopAnimating()

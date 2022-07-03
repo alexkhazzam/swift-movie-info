@@ -15,8 +15,8 @@ struct MovieManager {
     }
     
     func performRequest(_ requestString: String) {
-        print(requestString)
-        if let safeURL = URL(string: requestString) {
+        // requestString.map({String($0) == " " ? "%20" : String($0)}).joined()
+        if let safeURL = URL(string: requestString.replacingOccurrences(of: " ", with: "%20")) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: safeURL) {(data, response, error) in
                 if error != nil {
@@ -48,7 +48,7 @@ struct MovieManager {
                 ratings: decodedData.Ratings
             )
         } catch {
-            delegate?.movieNotFound()
+            delegate?.movieNotFound(self, error)
             return nil
         }
     }
