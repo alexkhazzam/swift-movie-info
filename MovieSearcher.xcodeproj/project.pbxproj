@@ -13,6 +13,13 @@
 		FAB69AEB2870DD6600A0525B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB69AE92870DD6600A0525B /* Main.storyboard */; };
 		FAB69AED2870DD6800A0525B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB69AEC2870DD6800A0525B /* Assets.xcassets */; };
 		FAB69AF02870DD6800A0525B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB69AEE2870DD6800A0525B /* LaunchScreen.storyboard */; };
+		FAB69AFB2870DE5700A0525B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69AFA2870DE5700A0525B /* ResultViewController.swift */; };
+		FAB69AFD2870E7D800A0525B /* UITextFieldDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69AFC2870E7D800A0525B /* UITextFieldDelegateExtension.swift */; };
+		FAB69B002870EA0100A0525B /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69AFF2870EA0100A0525B /* MovieManager.swift */; };
+		FAB69B022870ECC600A0525B /* MovieManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69B012870ECC600A0525B /* MovieManagerDelegate.swift */; };
+		FAB69B052870EE3E00A0525B /* MovieManagerDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69B042870EE3E00A0525B /* MovieManagerDelegateExtension.swift */; };
+		FAB69B092870F10E00A0525B /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69B082870F10E00A0525B /* MovieData.swift */; };
+		FAB69B0B2870F42300A0525B /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB69B0A2870F42300A0525B /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		FAB69AEC2870DD6800A0525B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB69AEF2870DD6800A0525B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB69AF12870DD6800A0525B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB69AFA2870DE5700A0525B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		FAB69AFC2870E7D800A0525B /* UITextFieldDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDelegateExtension.swift; sourceTree = "<group>"; };
+		FAB69AFF2870EA0100A0525B /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		FAB69B012870ECC600A0525B /* MovieManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerDelegate.swift; sourceTree = "<group>"; };
+		FAB69B042870EE3E00A0525B /* MovieManagerDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerDelegateExtension.swift; sourceTree = "<group>"; };
+		FAB69B082870F10E00A0525B /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		FAB69B0A2870F42300A0525B /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,60 @@
 			children = (
 				FAB69AE32870DD6600A0525B /* AppDelegate.swift */,
 				FAB69AE52870DD6600A0525B /* SceneDelegate.swift */,
-				FAB69AE72870DD6600A0525B /* ViewController.swift */,
-				FAB69AE92870DD6600A0525B /* Main.storyboard */,
+				FAB69B032870ECCD00A0525B /* Protocols */,
+				FAB69AFE2870E7DF00A0525B /* Extensions */,
+				FAB69AF92870DE3600A0525B /* Model */,
+				FAB69AF82870DE2200A0525B /* Controller */,
+				FAB69AF72870DE0C00A0525B /* View */,
 				FAB69AEC2870DD6800A0525B /* Assets.xcassets */,
 				FAB69AEE2870DD6800A0525B /* LaunchScreen.storyboard */,
 				FAB69AF12870DD6800A0525B /* Info.plist */,
 			);
 			path = MovieSearcher;
+			sourceTree = "<group>";
+		};
+		FAB69AF72870DE0C00A0525B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB69AE92870DD6600A0525B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB69AF82870DE2200A0525B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAB69AE72870DD6600A0525B /* ViewController.swift */,
+				FAB69AFA2870DE5700A0525B /* ResultViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FAB69AF92870DE3600A0525B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAB69AFF2870EA0100A0525B /* MovieManager.swift */,
+				FAB69B082870F10E00A0525B /* MovieData.swift */,
+				FAB69B0A2870F42300A0525B /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAB69AFE2870E7DF00A0525B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAB69AFC2870E7D800A0525B /* UITextFieldDelegateExtension.swift */,
+				FAB69B042870EE3E00A0525B /* MovieManagerDelegateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAB69B032870ECCD00A0525B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAB69B012870ECC600A0525B /* MovieManagerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB69AFD2870E7D800A0525B /* UITextFieldDelegateExtension.swift in Sources */,
+				FAB69B052870EE3E00A0525B /* MovieManagerDelegateExtension.swift in Sources */,
+				FAB69B0B2870F42300A0525B /* MovieModel.swift in Sources */,
 				FAB69AE82870DD6600A0525B /* ViewController.swift in Sources */,
+				FAB69B092870F10E00A0525B /* MovieData.swift in Sources */,
+				FAB69B022870ECC600A0525B /* MovieManagerDelegate.swift in Sources */,
 				FAB69AE42870DD6600A0525B /* AppDelegate.swift in Sources */,
 				FAB69AE62870DD6600A0525B /* SceneDelegate.swift in Sources */,
+				FAB69B002870EA0100A0525B /* MovieManager.swift in Sources */,
+				FAB69AFB2870DE5700A0525B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
